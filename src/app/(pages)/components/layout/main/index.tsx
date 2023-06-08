@@ -3,7 +3,13 @@ import { ReactNode } from 'react';
 
 export const Main = ({ children }: { children: ReactNode }) => {
   return (
-    <MainFlex width="70vw" height="75vh" alignx="center" aligny="center">
+    <MainFlex
+      width="80vw"
+      height="75vh"
+      alignx="center"
+      aligny="center"
+      direction="column"
+    >
       {children}
     </MainFlex>
   );
