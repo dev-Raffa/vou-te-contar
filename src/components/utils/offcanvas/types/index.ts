@@ -1,6 +1,6 @@
 import * as typeCard from '../../cards/types';
 import * as typeButtons from '../../buttons/types';
-import { animation } from '@/types/layouts';
+import { animation } from '@/types/layout';
 
 export type buttonCanvas = {
   variant: typeButtons.buttonStyleProps['variant'];
