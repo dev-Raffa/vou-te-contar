@@ -14,3 +14,7 @@ export interface cardProps extends blockFlex {
   body?: layoutTypes.children;
   footer?: layoutTypes.children;
 }
+
+export interface cardGroup extends blockFlex {
+  itens: Array<cardProps>;
+}
