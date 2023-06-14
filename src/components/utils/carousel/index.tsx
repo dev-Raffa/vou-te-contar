@@ -18,24 +18,33 @@ export const Carousel = ({ gap, itens, ...rest }: carousel) => {
       itemIndex < itens.length - 1
         ? itemIndex + 1
         : itemIndex - (itens.length - 1);
-    scroollToIndex(itemIndex, nextI);
+
+    const posY = carouselRef.current?.getBoundingClientRect().top || 0;
+    posY > 0 && scroollToIndex(itemIndex, nextI);
   }, 10000);
 
   const scroollToIndex = (currentIndex: number, nextIndex: number) => {
-    const carouselItens = carouselRef.current;
-    const indexItens = indexRef.current;
-    const item =
-      carouselItens?.getElementsByClassName('carousel-item')[nextIndex];
-    const previusBt = indexItens?.querySelectorAll('button')[currentIndex];
-    const currentBt = indexItens?.querySelectorAll('button')[nextIndex];
-    previusBt?.style.setProperty(
-      'background-color',
-      'rgba(217, 217, 217, 0.21)'
-    );
-    currentBt?.style.setProperty('background-color', 'rgba(217, 217, 217, 1)');
-    item?.scrollIntoView({
-      behavior: 'smooth'
-    });
+    carouselRef.current
+      ?.getElementsByClassName('carousel-item')
+      [nextIndex].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+      });
+
+    indexRef.current
+      ?.querySelectorAll('button')
+      [currentIndex].style.setProperty(
+        'background-color',
+        'rgba(217, 217, 217, 0.21)'
+      );
+    indexRef.current
+      ?.querySelectorAll('button')
+      [nextIndex].style.setProperty(
+        'background-color',
+        'rgba(217, 217, 217, 1)'
+      );
+
     setIndex(nextIndex);
   };
 

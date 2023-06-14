@@ -83,7 +83,7 @@ export const HighlightPosts = () => {
       id="highlight-posts"
       borderradius="15px"
       gap="2rem"
-      height="50rem"
+      height="40rem"
       width="100%"
       overflow="hidden"
       itens={itens}

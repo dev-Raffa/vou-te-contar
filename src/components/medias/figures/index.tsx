@@ -4,7 +4,7 @@ import type { FigureProps } from './types';
 
 export const Figure = ({ img, caption, ...args }: FigureProps) => {
   return (
-    <FigureFlex {...args}>
+    <FigureFlex position="relative" overflow="hidden" {...args}>
       <Image
         {...img}
         quality={img.quality ? img.quality : 75}
@@ -20,7 +20,7 @@ export const Figure = ({ img, caption, ...args }: FigureProps) => {
           position: 'absolute',
           width: '100%',
           bottom: '20px',
-          margin: '0 10px',
+          margin: '0 2%',
           zIndex: 2,
           rowGap: '2px'
         }}

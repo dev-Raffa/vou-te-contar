@@ -12,7 +12,7 @@ export interface imgFigureProps {
   fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
   height?: number | `${number}`;
   width?: number | `${number}`;
-  zindex: number;
+  zindex?: number;
 }
 
 export interface FigureProps extends blockFlex {

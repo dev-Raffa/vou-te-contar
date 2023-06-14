@@ -36,7 +36,9 @@ export interface blockStyle {
   margin?: string;
   padding?: string;
   gap?: string;
+  border?: string;
   borderradius?: string;
+  boxshadow?: string;
   overflow?: string;
   transition?: string;
   zindex?: number;
@@ -44,7 +46,7 @@ export interface blockStyle {
 
 export interface blockFlex extends blockStyle {
   direction?: layoutTypes.direction;
-  wrap?: 'nowwrap' | 'wrap' | 'wrap-reverse';
+  wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
   children?: ReactNode;
   ref?: RefObject<HTMLDivElement>;
 }

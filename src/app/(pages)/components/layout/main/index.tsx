@@ -6,7 +6,7 @@ export const Main = ({ children }: { children: ReactNode }) => {
     <MainFlex
       width="100vw"
       padding="0 10%"
-      height="75vh"
+      minheight="75vh"
       alignx="center"
       aligny="center"
       direction="column"

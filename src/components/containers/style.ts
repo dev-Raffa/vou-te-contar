@@ -29,6 +29,8 @@ export const BlockStyle = styled('div').attrs<blockProps>(({variant})=> ({as: va
   ${({maxwidth})=> maxwidth && `max-width: ${maxwidth};`}
   ${({minwidth})=> minwidth && `min-width: ${minwidth};`}
   ${({borderradius})=> borderradius && `border-radius: ${borderradius};`}
+  ${({border})=> border && `border: ${border};`}
+  ${({boxshadow})=>boxshadow && `box-shadow:${boxshadow};`}
   ${({ bgcolor, theme }) =>
     bgcolor != undefined
       && theme.colors[bgcolor]
