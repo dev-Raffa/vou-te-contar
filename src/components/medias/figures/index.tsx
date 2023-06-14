@@ -1,20 +1,32 @@
 import Image from 'next/image';
-import { BlockFigure } from '@/components/blocks/utils/figure';
+import { FigureFlex } from '@/components/containers/figure';
 import type { FigureProps } from './types';
 
 export const Figure = ({ img, caption, ...args }: FigureProps) => {
   return (
-    <BlockFigure {...args}>
+    <FigureFlex {...args}>
       <Image
         {...img}
         quality={img.quality ? img.quality : 75}
         style={{
           borderRadius: img.borderradius,
-          objectFit: img.fit
+          objectFit: img.fit,
+          zIndex: 1
         }}
       />
 
-      <figcaption style={{ marginTop: '10px' }}>{caption}</figcaption>
-    </BlockFigure>
+      <figcaption
+        style={{
+          position: 'absolute',
+          width: '100%',
+          bottom: '20px',
+          margin: '0 10px',
+          zIndex: 2,
+          rowGap: '2px'
+        }}
+      >
+        {caption}
+      </figcaption>
+    </FigureFlex>
   );
 };

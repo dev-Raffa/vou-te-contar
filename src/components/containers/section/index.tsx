@@ -1,3 +1,4 @@
+'use client';
 import { BlockStyle } from '../style';
 import { blockFlex, blockGrid } from '../types';
 

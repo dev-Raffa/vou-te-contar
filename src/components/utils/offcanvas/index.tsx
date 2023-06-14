@@ -6,12 +6,7 @@ import type { offCanvas } from './types';
 import { cardHeader } from '../cards/types';
 import { useOffCanvas } from '@/hooks/offCanvas';
 
-export const OffCanvas = ({
-  keyid,
-  buttonopen,
-  card,
-  animation
-}: offCanvas) => {
+export const OffCanvas = ({ keyid, buttonopen, card }: offCanvas) => {
   const { show, toggleShow } = useOffCanvas();
   const ButtonX = (
     <Button
@@ -38,9 +33,8 @@ export const OffCanvas = ({
         <Card
           keyid={keyid}
           position="fixed"
-          index="1"
+          zindex={1}
           header={header}
-          animation={animation}
           {...card}
         ></Card>
       )}

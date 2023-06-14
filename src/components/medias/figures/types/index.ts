@@ -1,7 +1,7 @@
-import type { utilsProps } from '@/components/blocks/utils/types';
+import type { blockFlex } from '@/components/containers/types';
 import { StaticImageData } from 'next/image';
 
-export type imgFigureProps = {
+export interface imgFigureProps {
   src: string | StaticImageData;
   alt: string;
   fill?: boolean;
@@ -12,9 +12,10 @@ export type imgFigureProps = {
   fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
   height?: number | `${number}`;
   width?: number | `${number}`;
-};
+  zindex: number;
+}
 
-export type FigureProps = utilsProps & {
+export interface FigureProps extends blockFlex {
   img: imgFigureProps;
-  caption?: utilsProps['children'] | string;
-};
+  caption?: blockFlex['children'] | string;
+}

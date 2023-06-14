@@ -1,13 +1,13 @@
-import { Article } from '@/components/blocks/contents/article';
-import { Header } from '@/components/blocks/contents/header';
-import { Footer } from '@/components/blocks/contents/footer';
+import { ArticleFlex } from '@/components/containers/article';
+import { HeaderFlex } from '@/components/containers/header';
+import { FooterFlex } from '@/components/containers/footer';
 import type { cardProps } from './types';
 
 export const Card = ({ body, footer, header, keyid, ...rest }: cardProps) => {
   return (
-    <Article id={keyid} key={keyid} {...rest}>
+    <ArticleFlex id={keyid} key={keyid} {...rest}>
       {header && (
-        <Header
+        <HeaderFlex
           key={`header-card-${keyid}`}
           height="7.5rem"
           width="100%"
@@ -16,16 +16,16 @@ export const Card = ({ body, footer, header, keyid, ...rest }: cardProps) => {
           padding="0 5%"
         >
           {header.content}
-        </Header>
+        </HeaderFlex>
       )}
 
       {body}
 
       {footer && (
-        <Footer alignx="center" aligny="center" height="10px" width="100%">
+        <FooterFlex alignx="center" aligny="center" height="10px" width="100%">
           {footer}
-        </Footer>
+        </FooterFlex>
       )}
-    </Article>
+    </ArticleFlex>
   );
 };

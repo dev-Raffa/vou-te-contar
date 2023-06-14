@@ -59,7 +59,7 @@ export const Button = styled.button<buttonStyleProps>`
             ? `min-width: ${theme.buttons.sizes.minWidth[minWidth]}rem;`
             : ''}
           border: none;
-          background-color: ${bgcolor ? theme.buttons.colors[bgcolor] : ''};
+          background-color: ${bgcolor ? theme.buttons.colors[bgcolor] : bgcolor};
           ${getBorderRadius(height)}
           ${color == 'dark' && theme.title == 'Light'
             ? `color: white;`
@@ -102,7 +102,7 @@ export const Button = styled.button<buttonStyleProps>`
         `;
       }
       case 'circle': {
-        const size = theme.buttons.sizes.height[height] + 'rem';
+        const size = theme.buttons.sizes.height[height] ? theme.buttons.sizes.height[height] + 'rem': height
         return css`
           transition: ${theme.transitions};
           display: flex;
@@ -111,11 +111,7 @@ export const Button = styled.button<buttonStyleProps>`
           flex-wrap: wrap;
           border: none;
           border-radius: 50%;
-          background-color: ${bgcolor == 'transparent'
-            ? theme.colors.tertiary
-            : bgcolor
-            ? theme.buttons.colors[bgcolor]
-            : ''};
+          background-color: ${theme.buttons.colors[bgcolor] ? theme.buttons.colors[bgcolor] : bgcolor};
           height: ${size};
           width: ${size};
           ${color && f.getColorOutline(color, theme)}
@@ -130,7 +126,7 @@ export const Button = styled.button<buttonStyleProps>`
         `;
       }
       case 'circle-outline': {
-        const size = theme.buttons.sizes.height[height] + 'rem';
+        const size = theme.buttons.sizes.height[height] ? theme.buttons.sizes.height[height] + 'rem': height
         return css`
           display: flex;
           align-items: center;

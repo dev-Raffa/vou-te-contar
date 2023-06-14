@@ -9,7 +9,7 @@ export const Logo = () => {
         src={logo}
         alt="três  icones indicando de conversas ao lado da frase vou te contar"
         fill
-        style={{ objectFit: 'cover' }}
+        style={{ objectFit: 'cover', left: '-20%' }}
       />
     </FigureFlex>
   );

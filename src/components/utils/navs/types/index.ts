@@ -44,7 +44,7 @@ export type IconStyle = {
 };
 
 export type LinkStyle = {
-  fontSize: keyof themeTypes.sizes;
+  fontSize?: keyof themeTypes.sizes;
   color?: keyof themeTypes.colors | string;
   height?: string;
   width?: string;
@@ -53,7 +53,7 @@ export type LinkStyle = {
     before?: string;
     after?: string;
   };
-  align: layoutTypes.alignX;
+  align?: layoutTypes.alignX;
   breakpoints?: Array<layoutTypes.breakPoint>;
   animation?: layoutTypes.animation;
   hover?: layoutTypes.hover;

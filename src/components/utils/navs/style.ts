@@ -21,7 +21,7 @@ export const NavLink = styled(Link)<T.LinkStyle>`
   line-height: 0.7;
   text-decoration: none;
   font-weight: 300;
-  font-size: ${({ fontSize, theme }) => theme.typography.sizes[fontSize]}rem;
+  font-size: ${({ fontSize, theme }) => fontSize && theme.typography.sizes[fontSize]}rem;
   ${({ height }) => height && `height: ${height};`}
   ${({ width }) => width && `width: ${width};`}
   ${({ align }) => align && f.getAlignX(align)}

@@ -1,5 +1,6 @@
 import * as typeTheme from '@/types/theme';
-import * as layoutTypes from '@/types/layouts';
+import * as layoutTypes from '@/types/layout';
+import { MouseEventHandler } from 'react';
 
 type variant =
   | 'default'
@@ -11,8 +12,8 @@ type variant =
 
 interface buttonStyle {
   color?: keyof typeTheme.colors;
-  bgcolor: keyof typeTheme.colors | 'transparent';
-  height: keyof typeTheme.height;
+  bgcolor: keyof typeTheme.colors | string;
+  height: keyof typeTheme.sizes | string;
   minWidth?: string;
   hover?: boolean;
   animation?: layoutTypes.animation;
@@ -21,8 +22,8 @@ interface buttonStyle {
 export interface buttonProps extends buttonStyle {
   id: string;
   arialabel?: string;
-  onClick: () => void;
-  children: layoutTypes.children;
+  children?: layoutTypes.children;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface buttonStyleProps extends buttonStyle {

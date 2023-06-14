@@ -28,6 +28,7 @@ export const BlockStyle = styled('div').attrs<blockProps>(({variant})=> ({as: va
   ${({width})=> width && `width: ${width};`}
   ${({maxwidth})=> maxwidth && `max-width: ${maxwidth};`}
   ${({minwidth})=> minwidth && `min-width: ${minwidth};`}
+  ${({borderradius})=> borderradius && `border-radius: ${borderradius};`}
   ${({ bgcolor, theme }) =>
     bgcolor != undefined
       && theme.colors[bgcolor]
@@ -40,5 +41,7 @@ export const BlockStyle = styled('div').attrs<blockProps>(({variant})=> ({as: va
         ? `color:${theme.typography.colors[color]};`
         : `color:${color};`
   }
+  ${({overflow}) => overflow && `overflow: ${overflow};`}
   ${({zindex})=> zindex && `z-index: ${zindex};`}
+
 `

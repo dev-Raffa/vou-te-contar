@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, RefObject } from 'react';
 import * as layoutTypes from '@/types/layout';
 import * as themeTypes from '@/types/theme';
 
@@ -16,6 +16,8 @@ export type variant =
   | 'video';
 
 export interface blockStyle {
+  className?: string;
+  id?: string;
   position?: layoutTypes.position;
   left?: string;
   top?: string;
@@ -34,6 +36,9 @@ export interface blockStyle {
   margin?: string;
   padding?: string;
   gap?: string;
+  borderradius?: string;
+  overflow?: string;
+  transition?: string;
   zindex?: number;
 }
 
@@ -41,6 +46,7 @@ export interface blockFlex extends blockStyle {
   direction?: layoutTypes.direction;
   wrap?: 'nowwrap' | 'wrap' | 'wrap-reverse';
   children?: ReactNode;
+  ref?: RefObject<HTMLDivElement>;
 }
 
 export interface blockGrid extends blockStyle {
@@ -49,6 +55,7 @@ export interface blockGrid extends blockStyle {
   rows?: layoutTypes.rows;
   templaterows?: string;
   children?: ReactNode;
+  ref?: RefObject<HTMLDivElement>;
 }
 
 export interface blockProps extends blockFlex, blockGrid {

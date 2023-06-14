@@ -3,7 +3,7 @@ import { blockFlex, blockGrid } from '../types';
 
 export const FigureFlex = ({ children, ...rest }: blockFlex) => {
   return (
-    <BlockStyle variant="figure" display="flex" direction="row" {...rest}>
+    <BlockStyle variant="figure" display="flex" {...rest}>
       {children}
     </BlockStyle>
   );

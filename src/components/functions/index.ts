@@ -1,5 +1,5 @@
 import { css, keyframes } from 'styled-components';
-import type { animation, hover, target, breakPoint } from '@/types/layouts';
+import type { animation, hover, target, breakPoint } from '@/types/layout';
 import * as themeTypes from '@/types/theme';
 import { DefaultTheme } from 'styled-components';
 import { Opacity } from '../animations';

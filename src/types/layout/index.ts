@@ -37,3 +37,14 @@ export type animation = {
   direction?: 'normal' | 'reverse' | 'alternate' | 'alternate-reverse';
   repeat?: 'infinite' | number;
 };
+export type target = {
+  id: string;
+  comands: string;
+  before?: string;
+  after?: string;
+  animation?: {
+    variant?: 'opacity';
+    time?: string;
+    delay?: string;
+  };
+};

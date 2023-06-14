@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { breakPoint } from '@/types/layouts';
+import { breakPoint } from '@/types/layout';
 
 export const getBreakPoints = (breakpoints: Array<breakPoint>) => {
   return breakpoints.map(({ sizes, comands }) => {
