@@ -10,11 +10,13 @@ export type cardHeader = {
 
 export interface cardProps extends blockFlex {
   keyid: string;
+  height: string;
   header?: cardHeader;
   body?: layoutTypes.children;
   footer?: layoutTypes.children;
 }
 
 export interface cardGroup extends blockFlex {
+  title?: string;
   itens: Array<cardProps>;
 }

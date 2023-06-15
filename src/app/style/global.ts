@@ -18,6 +18,23 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: ${({ theme }) => theme.colors.primary};
+  width: 98vw;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  border-left: #FFFFFF solid 1px;
+  padding-left: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background: ${({ theme }) => theme.colors.secundary};
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid ${({ theme }) => theme.colors.primary};
 }
 `;
 

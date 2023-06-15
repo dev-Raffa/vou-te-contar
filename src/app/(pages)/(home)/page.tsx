@@ -4,7 +4,7 @@ import { LastPosts } from './components/cardGroup';
 export default function Home() {
   return (
     <>
-      <HighlightPosts />;
+      <HighlightPosts />
       <LastPosts />
     </>
   );

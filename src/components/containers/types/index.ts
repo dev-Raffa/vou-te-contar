@@ -39,7 +39,7 @@ export interface blockStyle {
   border?: string;
   borderradius?: string;
   boxshadow?: string;
-  overflow?: string;
+  overflow?: 'scroll' | 'hidden' | 'visible';
   transition?: string;
   zindex?: number;
 }

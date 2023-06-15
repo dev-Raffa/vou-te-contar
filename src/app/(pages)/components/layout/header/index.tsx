@@ -7,7 +7,7 @@ export const Header = () => {
     <HeaderFlex
       alignx="space-between"
       aligny="center"
-      width="100vw"
+      width="100%"
       height="7.5rem"
       padding="0 10%"
       position="sticky"

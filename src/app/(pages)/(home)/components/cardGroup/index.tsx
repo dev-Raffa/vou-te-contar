@@ -29,7 +29,8 @@ const Figures: Array<FigureProps> = [
     },
     alignx: 'center',
     height: '13rem',
-    width: '100%'
+    width: '100%',
+    borderradius: '1rem 1rem 0 0'
   },
   {
     img: {
@@ -41,7 +42,8 @@ const Figures: Array<FigureProps> = [
     },
     alignx: 'center',
     height: '13rem',
-    width: '100%'
+    width: '100%',
+    borderradius: '1rem 1rem 0 0'
   },
   {
     img: {
@@ -53,7 +55,8 @@ const Figures: Array<FigureProps> = [
     },
     alignx: 'center',
     height: '13rem',
-    width: '100%'
+    width: '100%',
+    borderradius: '1rem 1rem 0 0'
   },
   {
     img: {
@@ -65,7 +68,8 @@ const Figures: Array<FigureProps> = [
     },
     alignx: 'center',
     height: '13rem',
-    width: '100%'
+    width: '100%',
+    borderradius: '1rem 1rem 0 0'
   }
 ];
 const titles: Array<string> = [
@@ -91,8 +95,7 @@ const lasPosts: Array<cardProps> = [
     bgcolor: 'secondary',
     minwidth: '17rem',
     padding: '1rem',
-    border: '1px  solid rgb(80 77 77 / 66%)',
-    boxshadow: '1px 1px 1px rgb(80 77 77 / 66%)',
+    boxshadow: '1px 1px 1px 1px rgb(80 77 77 / 66%)',
     borderradius: '10px',
     body: (
       <>
@@ -113,8 +116,7 @@ const lasPosts: Array<cardProps> = [
     bgcolor: 'secondary',
     minwidth: '17rem',
     padding: '1rem',
-    border: '1px  solid rgb(80 77 77 / 66%)',
-    boxshadow: '1px 1px 1px rgb(80 77 77 / 66%)',
+    boxshadow: '1px 1px 1px 1px rgb(80 77 77 / 66%)',
     borderradius: '10px',
     body: (
       <>
@@ -135,8 +137,7 @@ const lasPosts: Array<cardProps> = [
     bgcolor: 'secondary',
     minwidth: '17rem',
     padding: '1rem',
-    border: '1px  solid rgb(80 77 77 / 66%)',
-    boxshadow: '1px 1px 1px rgb(80 77 77 / 66%)',
+    boxshadow: '1px 1px 1px 1px rgb(80 77 77 / 66%)',
     borderradius: '10px',
     body: (
       <>
@@ -157,8 +158,7 @@ const lasPosts: Array<cardProps> = [
     bgcolor: 'secondary',
     minwidth: '17rem',
     padding: '1rem',
-    border: '1px  solid rgb(80 77 77 / 66%)',
-    boxshadow: '1px 1px 1px rgb(80 77 77 / 66%)',
+    boxshadow: '1px 1px 1px 1px rgb(80 77 77 / 66%)',
     borderradius: '10px',
     body: (
       <>
@@ -179,8 +179,7 @@ const lasPosts: Array<cardProps> = [
     bgcolor: 'secondary',
     minwidth: '17rem',
     padding: '1rem',
-    border: '1px  solid rgb(80 77 77 / 66%)',
-    boxshadow: '1px 1px 1px rgb(80 77 77 / 66%)',
+    boxshadow: '1px 1px 1px 1px rgb(80 77 77 / 66%)',
     borderradius: '10px',
     body: (
       <>
@@ -200,14 +199,16 @@ export const LastPosts = () => {
   return (
     <CardGroup
       itens={lasPosts}
+      title="Posts mais recentes"
       direction="row"
       wrap="nowrap"
       bgcolor="transparent"
       width="100%"
-      height="fit-content"
+      height="30rem"
       padding="0 2rem"
       gap="2rem"
       aligny="center"
+      overflow="scroll"
     />
   );
 };

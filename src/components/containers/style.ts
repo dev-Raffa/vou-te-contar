@@ -5,6 +5,7 @@ import { blockProps } from "./types";
 
 //@ts-ignore
 export const BlockStyle = styled('div').attrs<blockProps>(({variant})=> ({as: variant}))<blockProps>`
+
   ${({position})=> position && `position: ${position};`}
   ${({left})=> left && `left: ${left};`}
   ${({top})=> top && `top: ${top};`}
@@ -46,4 +47,16 @@ export const BlockStyle = styled('div').attrs<blockProps>(({variant})=> ({as: va
   ${({overflow}) => overflow && `overflow: ${overflow};`}
   ${({zindex})=> zindex && `z-index: ${zindex};`}
 
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.secundary};
+  }
+  ::-webkit-scrollbar-thumb {
+    width:5px;
+    background-color: #ffffff4a;
+    border-radius: 20px;
+    border: 5px solid ${({ theme }) => theme.colors.primary};
+  }
 `
